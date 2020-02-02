@@ -131,7 +131,7 @@ def rank(args):
         filtered_period = filter(lambda x: len(x) > 1, period)                                          
         # now we do another filter to make sure that there's at least one finisher and that
         # everybody didn't forfeit
-        filtered_period = filter(lambda x: len(list(filter(lambda y: math.isnan(y) is False, x.values()))) >= 1, period)
+        filtered_period = filter(lambda x: len(list(filter(lambda y: math.isnan(y) is False, x.values()))) > 1, period)
         # now we can add the filtered period as a list (since it is currently a filter object)
         new_period.add_races(list(filtered_period))
         
